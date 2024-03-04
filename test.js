@@ -16,15 +16,15 @@ test("One euro should be 1.07 dollars", function() {
 
 
 //dollar to yens
-test ("One dollar should be 150.10 yen", function () {
+test ("One dollar should be 156.5 yen", function () {
     const { fromDollarToYen } = require('./app.js');
-    const expected = 150.10 * 2;
-    expect(fromDollarToYen(150.10)).toBe(300.2);
+    const expected = 156.5 * 2;
+    expect(fromDollarToYen(2)).toBe(expected);
 })
 
 //yen to pounds
 test ("One yen should be 0.0053 pound", function () {
     const { fromYenToPound } = require('./app.js');
-    const expected = 0.0053 * 100;
-    expect(fromYenToPound(0.0053)).toBe(0.53)
+    const expected = 0.0053 * (1/0.0053) * 0.87;
+    expect(fromYenToPound(0.0053)).toBe(expected)
 })

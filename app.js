@@ -19,14 +19,14 @@ const fromEuroToDollar = function(valueInEuro) {
     return valueInDollar;
 }
 
-const fromDollarToYen = function(valueInDollar){
+const fromDollarToYen = function(valueInDollar) {
     let valueInYen = valueInDollar * 156.5;
     return valueInYen;
 }
 
-const fromYenToPound = function(valueInYen){
+const fromYenToPound = function(valueInYen) {
     let valueInPound = valueInYen * (1/valueInYen) * 0.87;
-    return valueInYen;
+    return valueInPound;
 }
 // let oneDollarIs = {
 //     "EUR": 0.92, // eurozone currency
@@ -49,4 +49,4 @@ const sum = (a,b) => {
     return  a+b
 }
 
-module.exports = { sum, fromEuroToDollar }
+module.exports = { sum, fromEuroToDollar, fromDollarToYen, fromYenToPound }
